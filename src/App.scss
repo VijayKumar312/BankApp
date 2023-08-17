@@ -1,0 +1,40 @@
+@import './mixins.scss';
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+button{
+  border: none;
+  cursor: pointer;
+  padding: 6px 7px;
+  background: transparent;
+}
+ul{
+  list-style-type: none;
+}
+input{
+  outline: none;
+  border: 2px solid;
+}
+
+.homeContainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  @include sm{
+    flex-direction: row;
+  }
+  .contentContainer{
+    width: 100%;
+    overflow-y: auto;
+    @include sm{
+        width: 70%;
+    }
+    @include lg{
+        width: 80%;
+    }
+  }
+}

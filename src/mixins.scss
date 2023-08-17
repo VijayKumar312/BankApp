@@ -1,0 +1,45 @@
+$base-font-size: 14px;
+
+$font-sizes: ( 
+  sm: $base-font-size,
+  md: $base-font-size * 1.125,
+  lg: $base-font-size * 1.25,
+  xl: $base-font-size * 1.375,
+  xxl: $base-font-size * 1.5,
+);
+
+@mixin font-size($size) {
+    font-size: map-get($font-sizes, $size);
+}
+
+@mixin sm {
+    @media only screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media only screen and (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media only screen and (min-width: 1536px) {
+        @content;
+    }
+}
+
+
